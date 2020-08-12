@@ -15,13 +15,13 @@ void loop() {
   // put your main code here, to run repeatedly:
   sensorValue = analogRead(LDR_PIN); 
   Serial.println("LDR Value:" + String (sensorValue));
-  if (sensorValue < 150) {
+  if (sensorValue < 180) {
     int cls[4]={1,1,1,1};
     for (int i =0;i<4;i++){
       digitalWrite(ledPins[i], cls[i]);
     } 
   }
-  else if (sensorValue >= 150 && sensorValue < 300) {
+  else if (sensorValue >= 180 && sensorValue < 300) {
     int cls[4]={1,1,1,0};
     for (int i =0;i<4;i++){
       digitalWrite(ledPins[i], cls[i]);
